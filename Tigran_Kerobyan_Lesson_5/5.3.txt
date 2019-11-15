@@ -1,0 +1,25 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int product = calculateProduct(num1, num2);
+        int cubeOfProduct = calculateCubeOfProduct(product);
+        System.out.println("The Cube of the Product is  " + cubeOfProduct);
+    }
+
+    public static int calculateProduct(int num1, int num2) {
+        int product = num1 * num2;
+        return product;
+    }
+
+    public static int calculateCubeOfProduct(int product) {
+        int cubeOfProduct = product * product;
+        return cubeOfProduct;
+    }
+}

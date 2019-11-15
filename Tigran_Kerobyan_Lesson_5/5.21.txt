@@ -1,0 +1,108 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please Enter Matrix N ");
+        int n = scanner.nextInt();
+        int[][] matrix = createMatrix(n);
+        printMatrix(matrix);
+        String string = printMenu();
+        int num = scanner.nextInt();
+        while (num != 4) {
+            switch (num) {
+                case 1:
+                    int[][] matrix1 = rotateMatrix(matrix, 90);
+                    printMatrix(matrix1);
+                    break;
+                case 2:
+                    int[][] matrix2 = rotateMatrix(matrix, 180);
+                    printMatrix(matrix2);
+                    break;
+                case 3:
+                    int[][] matrix4 = rotateMatrix(matrix, 270);
+                    printMatrix(matrix4);
+                    break;
+                default:
+                    System.out.println("Please Enter 1,2,3 or 4 ");
+                    break;
+            }
+            String string1 = printMenu();
+            num = scanner.nextInt();
+        }
+    }
+
+    public static int[][] createMatrix(int num) {
+        Random random = new Random();
+        int[][] matrix1 = new int[num][num];
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j < num; j++) {
+                matrix1[i][j] = random.nextInt(51) + 27;
+            }
+        }
+        return matrix1;
+    }
+
+    public static int[][] rotateMatrix(int[][] matrix, int degree) {
+        if (degree == 90) {
+            System.out.println("Matrix Rotated in 90* ");
+            int[][] matrix1 = new int[matrix.length][matrix.length];
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix.length; j++) {
+                    matrix1[i][j] = matrix[matrix.length - 1 - j][i];
+                }
+            }
+            return matrix1;
+        }
+        if (degree == 180) {
+            System.out.println("Matrix Rotated in 180* ");
+            int[][] matrix2 = new int[matrix.length][matrix.length];
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix.length; j++) {
+                    matrix2[i][j] = matrix[matrix.length - 1 - i][matrix[i].length - 1 - j];
+                }
+            }
+            return matrix2;
+        }
+        if (degree == 270) {
+
+            System.out.println("Matrix Rotated in 270* ");
+            int[][] matrix4 = new int[matrix.length][matrix.length];
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix.length; j++) {
+                    matrix4[i][j] = matrix[j][matrix[j].length - 1 - i];
+                }
+            }
+            return matrix4;
+        }
+        return matrix;
+    }
+
+    public static int[][] printMatrix(int[][] matrix) {
+        int[][] matrix1 = new int[matrix.length][matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println(" ");
+        }
+        System.out.println(" ");
+        return matrix1;
+    }
+
+    public static String printMenu() {
+        String string = " ———————- MENU —————-\n" +
+                "Press 1 For rotating 90*\n" +
+                "Press 2 For rotating 180*\n" +
+                "Press 3 For rotating 270*\n" +
+                "Press 4 to Exit\n" +
+                "————————————————\n" +
+                "\n";
+        System.out.println(string);
+        return string;
+    }
+}
+

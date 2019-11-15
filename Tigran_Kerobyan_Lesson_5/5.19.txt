@@ -1,0 +1,79 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[][] matrix = createMatrix(n);
+        printMatrix(matrix);
+        int[][] matrix1 = rotateMatrix(matrix, 90);
+        printMatrix(matrix1);
+        int[][] matrix2 = rotateMatrix(matrix, 180);
+        printMatrix(matrix2);
+        int[][] matrix3 = rotateMatrix(matrix, 270);
+        printMatrix(matrix3);
+    }
+
+    public static int[][] createMatrix(int num) {
+        Random random = new Random();
+        int[][] matrix = new int[num][num];
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j < num; j++) {
+                matrix[i][j] = random.nextInt(51) + 27;
+            }
+        }
+        return matrix;
+    }
+
+    public static int[][] rotateMatrix(int[][] matrix, int degree) {
+        if (degree == 90) {
+            System.out.println("Matrix Rotated in 90* ");
+            int[][] matrix1 = new int[matrix.length][matrix.length];
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix.length; j++) {
+                    matrix1[i][j] = matrix[matrix.length - 1 - j][i];
+                }
+            }
+            return matrix1;
+        }
+
+        if (degree == 180) {
+            System.out.println("Matrix Rotated in 180* ");
+            int[][] matrix2 = new int[matrix.length][matrix.length];
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix.length; j++) {
+                    matrix2[i][j] = matrix[matrix.length - 1 - i][matrix[i].length - 1 - j];
+                }
+            }
+            return matrix2;
+        }
+
+        if (degree == 270) {
+
+            System.out.println("Matrix Rotated in 270* ");
+            int[][] matrix3 = new int[matrix.length][matrix.length];
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix.length; j++) {
+                    matrix3[i][j] = matrix[j][matrix[j].length - 1 - i];
+                }
+            }
+            return matrix3;
+        }
+        return matrix;
+    }
+
+    public static int[][] printMatrix(int[][] matrix) {
+        int[][] matrix1 = new int[matrix.length][matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println(" ");
+        }
+        System.out.println(" ");
+        return matrix1;
+    }
+}

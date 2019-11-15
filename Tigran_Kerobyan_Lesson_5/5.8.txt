@@ -1,0 +1,68 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Please Enter a Password !");
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.next();
+        if (chechDigits(string) && checkCharacters(string) && checkLength(string)) {
+            System.out.println("The Password is Valid");
+        } else {
+            System.out.println("The Password isn't Valid");
+        }
+    }
+
+    public static boolean checkLength(String string) {
+        boolean checkLength;
+        if (string.length() >= 10) {
+            checkLength = true;
+        } else {
+            checkLength = false;
+        }
+        return checkLength;
+    }
+
+    public static boolean isLetter(char ch) {
+        ch = Character.toUpperCase(ch);
+        return (ch >= 'A' && ch <= 'Z');
+    }
+
+    public static boolean isNumeric(char ch) {
+
+        return (ch >= '0' && ch <= '9');
+    }
+
+    public static boolean checkCharacters(String string) {
+        boolean bool = true;
+        for (int i = 0; i < string.length(); i++) {
+            if (isLetter(string.charAt(i)) || isNumeric(string.charAt(i))) {
+                continue;
+            } else {
+                bool = false;
+                break;
+            }
+        }
+        return bool;
+    }
+
+    public static boolean chechDigits(String string) {
+        boolean bool = false;
+        int counter = 0;
+        for (int i = 0; i < string.length(); i++) {
+            if (isNumeric(string.charAt(i))) {
+                counter++;
+            } else {
+                continue;
+            }
+        }
+        if (counter >= 2) {
+            bool = true;
+        }
+        return bool;
+    }
+}
+
+
+

@@ -1,0 +1,51 @@
+package com.company;
+
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] array = new int[10];
+        array = initializesNumbers(array);
+        printArray(array);
+        System.out.println(" ");
+        array = sortInAsc(array);
+        printArray(array);
+    }
+
+    public static int[] sortInAsc(int[] array) {
+        boolean bool = false;
+        int num;
+        while (!bool) {
+            bool = true;
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] > array[i + 1]) {
+                    num = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = num;
+                    bool = false;
+                }
+            }
+        }
+        return array;
+    }
+
+    public static int[] initializesNumbers(int[] array) {
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(1000);
+        }
+        return array;
+    }
+
+    public static int[] printArray(int[] array) {
+        int[] array1 = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        return array1;
+    }
+}
+
+
+
+

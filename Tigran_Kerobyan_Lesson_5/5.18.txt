@@ -1,0 +1,39 @@
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Please Enter The matrix Size !");
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        int[][] matrix = createMatrix(size);
+        printMatrix(createMatrix(size));
+    }
+
+    public static int[][] createMatrix(int num) {
+        Random random = new Random();
+        int[][] matrix = new int[num][num];
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j < num; j++) {
+                matrix[i][j] = random.nextInt(10000);
+            }
+        }
+        return matrix;
+    }
+
+    public static int[][] printMatrix(int[][] matrix) {
+        int[][] matrix1 = new int[matrix.length][matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println(" ");
+        }
+        System.out.println(" ");
+        return matrix1;
+    }
+}
+
+

@@ -1,0 +1,19 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.next();
+        char middle = middleChar(string);
+        System.out.println(middle);
+    }
+
+    public static char middleChar(String string) {
+        char middle = string.charAt(string.length() / 2);
+        return middle;
+    }
+}
+

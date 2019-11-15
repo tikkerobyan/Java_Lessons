@@ -1,0 +1,29 @@
+package com.company;
+
+
+public class Main {
+    public static void main(String[] args) {
+        String string = printPrimeNumbers(100);
+        System.out.println("2" + string);
+    }
+
+    public static String printPrimeNumbers(int num) {
+        String string = " ";
+        for (int i = 3; i < num; i = i + 2) {
+            boolean contains = false;
+            for (int j = 2; j < i / 2; j++) {
+                if (i % j == 0) {
+                    contains = true;
+                    break;
+                }
+            }
+            if (!contains) {
+                string += i + " ";
+            }
+        }
+        return string;
+    }
+}
+
+
+

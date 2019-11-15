@@ -1,0 +1,45 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please Enter the Sides!");
+        double side1 = scanner.nextDouble();
+        double side2 = scanner.nextDouble();
+        double side3 = scanner.nextDouble();
+        boolean bool = isValid(side1, side2, side3);
+        if (bool) {
+            System.out.println("P= " + calculatePerimetre(side1, side2, side3));
+            System.out.println("S= " + calculateArea(side1, side2, side3));
+        } else {
+            System.out.println("The Triangel isn't Valid");
+        }
+    }
+
+    public static boolean isValid(double side1, double side2, double side3) {
+        boolean bool = false;
+        if (side1 > 0 && side2 > 0 && side3 > 0) {
+            if ((side1 + side2) > side3 && (side1 + side3) > side2 && (side2 + side3) > side1) {
+                bool = true;
+            }
+        }
+        return bool;
+    }
+
+    public static double calculatePerimetre(double side1, double side2, double side3) {
+        double p;
+        p = side1 + side2 + side3;
+        return p;
+    }
+
+    public static double calculateArea(double side1, double side2, double side3) {
+        double p = (side1 + side2 + side3) / 2;
+        double s = Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
+        return s;
+    }
+}
+
+
+

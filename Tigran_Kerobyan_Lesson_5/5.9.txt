@@ -1,0 +1,27 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Please Enter the Radius ");
+        Scanner scanner = new Scanner(System.in);
+        double radius = scanner.nextDouble();
+        double area = calculateAreaOfCircle(radius);
+        double perimeter = calculatePerimeterOfCircle(radius);
+        System.out.println("The Area Of The Circle is " + area);
+        System.out.println("The Perimeter Of The Circle is " + perimeter);
+    }
+
+    public static double calculateAreaOfCircle(double r) {
+        double area = Math.pow(r, 2) * Math.PI;
+        return area;
+    }
+
+    public static double calculatePerimeterOfCircle(double r) {
+        double perimeter = 2 * Math.PI * r;
+        return perimeter;
+    }
+}
+
+

@@ -1,0 +1,23 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Please Enter A Number !");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        int factorial = calculateFactorial(num);
+        System.out.println(num + "! = " + factorial);
+    }
+
+    public static int calculateFactorial(int num) {
+        int factorial = 1;
+        for (int i = 1; i <= num; i++) {
+            factorial = factorial * i;
+        }
+        return factorial;
+    }
+}
+
+
