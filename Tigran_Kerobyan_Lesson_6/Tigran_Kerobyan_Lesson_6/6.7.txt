@@ -1,0 +1,116 @@
+package com.company;
+
+public class CurrencyConverter {
+    //Properties
+    private double dollar;
+    private double dram;
+    private double euro;
+    private double ruble;
+
+    //Constuctors
+    public CurrencyConverter(double dollar, double dram, double euro, double ruble) {
+        this.dollar = dollar;
+        this.dram = dram;
+        this.euro = euro;
+        this.ruble = ruble;
+    }
+
+    public CurrencyConverter() {
+    }
+
+    //Metods
+    public double convertDollarToEuro() {
+        double euro = this.dollar * 0.904978195;
+        return euro;
+    }
+
+    public double convertDollarToDram() {
+        double dram = this.dollar * 477.570;
+        return dram;
+    }
+
+    public double convertDollarToRuble() {
+        double ruble = this.dollar * 63.5433;
+        return ruble;
+    }
+
+    public double convertEuroToDollar() {
+        double dollar = this.euro * 1.10523;
+        return dollar;
+    }
+
+    public double convertEuroToDram() {
+        double dram = this.euro * 527.851;
+        return dram;
+    }
+
+    public double convertEuroToRuble() {
+        double ruble = this.euro * 70.2306;
+        return ruble;
+    }
+
+    public double convertDramToDollar() {
+        double dollar = this.dram * 0.00209393;
+        return dollar;
+    }
+
+    public double convertDramToEuro() {
+        double euro = this.dram * 0.00189435;
+        return euro;
+    }
+
+    public double convertDramToRuble() {
+        double ruble = this.dram * 0.133045;
+        return ruble;
+    }
+
+    public double convertRubleToDollar() {
+        double dollar = this.ruble * 0.0157386;
+        return dollar;
+    }
+
+    public double convertRubleToEuro() {
+        double euro = this.ruble * 0.0142341;
+        return euro;
+    }
+
+    public double convertRubleToDram() {
+        double dram = this.ruble * 7.51416;
+        return dram;
+    }
+
+
+    //region Getters and Setters
+    public double getDollar() {
+        return dollar;
+    }
+
+    public void setDollar(double dollar) {
+        this.dollar = dollar;
+    }
+
+    public double getDram() {
+        return dram;
+    }
+
+    public void setDram(double dram) {
+        this.dram = dram;
+    }
+
+    public double getEuro() {
+        return euro;
+    }
+
+    public void setEuro(double euro) {
+        this.euro = euro;
+    }
+
+    public double getRuble() {
+        return ruble;
+    }
+
+    public void setRuble(double ruble) {
+        this.ruble = ruble;
+    }
+    //endregion
+}

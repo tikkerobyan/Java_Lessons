@@ -1,0 +1,53 @@
+package com.company;
+
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Movie[] movies = new Movie[10];
+        String[] movieNames = {"The Godfather", "Chinatown", "Forrest Gump", "Amadeus", "Gladiator", "Titanic", "Unforgiven", "Rocky", "Jaws", "Patton"};
+        Movie theGodfather = new Movie();
+        Movie forrestGump = new Movie();
+        Movie chinatown = new Movie();
+        Movie amadeus = new Movie();
+        Movie gladiator = new Movie();
+        Movie titanic = new Movie();
+        Movie unforgiven = new Movie();
+        Movie rocky = new Movie();
+        Movie jaws = new Movie();
+        Movie patton = new Movie();
+
+        movies[0] = theGodfather;
+        movies[1] = forrestGump;
+        movies[2] = chinatown;
+        movies[3] = amadeus;
+        movies[4] = gladiator;
+        movies[5] = titanic;
+        movies[6] = unforgiven;
+        movies[7] = rocky;
+        movies[8] = jaws;
+        movies[9] = patton;
+
+        Random random = new Random();
+        for (int i = 0; i < movies.length; i++) {
+            movies[i].setTitle(movieNames[i]);
+            movies[i].setRating(random.nextInt(10));
+            System.out.println(movies[i].getTitle() + " ----" + movies[i].getRating());
+        }
+        System.out.println(" ");
+        System.out.println("The Best Rated Movie/Movies");
+        int num = movies[0].getRating();
+        for (int i = 1; i < 10; i++) {
+            if (movies[i].getRating() > num) {
+                num = movies[i].getRating();
+            }
+        }
+        for (int i = 0; i < movies.length; i++) {
+            if (num == movies[i].getRating()) {
+                System.out.println(movies[i].getTitle());
+            }
+        }
+    }
+}
+

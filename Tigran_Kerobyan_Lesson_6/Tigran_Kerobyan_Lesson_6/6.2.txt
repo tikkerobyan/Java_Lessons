@@ -1,0 +1,46 @@
+package com.company;
+
+public class Rectangle {
+
+    //Properties
+    private double height;
+    private double width;
+
+    //Constructors
+    public Rectangle(double height, double width) {
+        this.height = height;
+        this.width = width;
+    }
+
+    public Rectangle() {
+    }
+
+    //Metods
+    public double calculatePerimeter() {
+        double p = 2 * (this.height + this.width);
+        return p;
+    }
+
+    public double calculateArea() {
+        double s = this.height * this.width;
+        return s;
+    }
+
+    //region Getters and Setters
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+    //endregion
+}

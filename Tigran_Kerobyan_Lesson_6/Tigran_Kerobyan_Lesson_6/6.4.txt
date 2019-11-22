@@ -1,0 +1,46 @@
+package com.company;
+
+public class Point {
+    //Properties
+    private double coordinateX;
+    private double coordinateY;
+
+    //Constructors
+    public Point(double coordinateX, double coordinateY) {
+        this.coordinateX = coordinateX;
+        this.coordinateY = coordinateY;
+    }
+
+    public Point() {
+    }
+
+    //Metods
+    public double getDistance() {
+        double distance = Math.sqrt(Math.pow(this.coordinateX, 2) + Math.pow(this.coordinateY, 2));
+        return distance;
+    }
+
+    public double getDistance(double x, double y) {
+        double distance = Math.sqrt(Math.pow((x - this.coordinateX), 2) + Math.pow((y - this.coordinateY), 2));
+        return distance;
+    }
+
+
+    //region Getters and Setters
+    public double getCoordinateX() {
+        return coordinateX;
+    }
+
+    public void setCoordinateX(double coordinateX) {
+        this.coordinateX = coordinateX;
+    }
+
+    public double getCoordinateY() {
+        return coordinateY;
+    }
+
+    public void setCoordinateY(double coordinateY) {
+        this.coordinateY = coordinateY;
+    }
+    //endregion
+}

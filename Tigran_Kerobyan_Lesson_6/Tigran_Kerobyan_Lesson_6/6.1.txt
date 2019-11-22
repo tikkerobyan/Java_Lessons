@@ -1,0 +1,35 @@
+package com.company;
+
+public class Circle {
+    //Properties
+    private double radius;
+
+    //Constructor
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public Circle() {
+    }
+
+    //Metods
+    public double calculatePerimeter() {
+        double p = 2 * Math.PI * this.radius;
+        return p;
+    }
+
+    public double calculateArea() {
+        double s = Math.PI * Math.pow(this.radius, 2);
+        return s;
+    }
+
+    //regionGetter and Setter
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+    //endregion
+}
