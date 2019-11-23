@@ -1,11 +1,12 @@
 package com.company;
 
 public class DistanceConverter {
-    //Properties
+    //region Properties
     private double meter;
     private double mile;
+    //endregion
 
-    //Constuctors
+    //region Constuctors
     public DistanceConverter(double meter, double mile) {
         this.meter = meter;
         this.mile = mile;
@@ -13,8 +14,9 @@ public class DistanceConverter {
 
     public DistanceConverter() {
     }
+    //endregion
 
-    //Metods
+    //region Metods
     public double convertMetersToMiles() {
         double distanceMile = this.meter * 0.000621371192;
         return distanceMile;
@@ -24,6 +26,7 @@ public class DistanceConverter {
         double distanceMeter = this.mile * 1.609344;
         return distanceMeter;
     }
+    //endregion
 
     //region Getters and Setters
     public double getMeter() {
