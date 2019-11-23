@@ -2,11 +2,12 @@
 package com.company;
 
 public class Movie {
-    //Properties
+    //region Properties
     private String title;
     private int rating;
+    //endregion
 
-    //Constuctors
+    //region Constuctors
     public Movie(String title, int rating) {
         this.title = title;
         this.rating = rating;
@@ -14,6 +15,7 @@ public class Movie {
 
     public Movie() {
     }
+    //endregion
 
     //Metods
 
