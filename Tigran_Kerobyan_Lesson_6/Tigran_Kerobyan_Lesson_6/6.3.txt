@@ -1,12 +1,13 @@
 package com.company;
 
 public class Triangle {
-    //Properties
+    //region Properties
     private double side1;
     private double side2;
     private double side3;
+    //endregion
 
-    //Constructors
+    //region Constructors
     public Triangle(double side1, double side2, double side3) {
         this.side1 = side1;
         this.side2 = side2;
@@ -15,6 +16,7 @@ public class Triangle {
 
     public Triangle() {
     }
+    //endregion
 
     //region Metods
     public double calculatePerimeter() {
