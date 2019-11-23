@@ -1,25 +1,6 @@
 package com.company;
 
 public class CurrencyConverter {
-    //region Properties
-    private double dollar;
-    private double dram;
-    private double euro;
-    private double ruble;
-    //endregion
-
-    //region Constuctors
-    public CurrencyConverter(double dollar, double dram, double euro, double ruble) {
-        this.dollar = dollar;
-        this.dram = dram;
-        this.euro = euro;
-        this.ruble = ruble;
-    }
-
-    public CurrencyConverter() {
-    }
-    //endregion
-
     //region Metods
     public double convertDollarToEuro() {
         double euro = this.dollar * 0.904978195;
@@ -80,39 +61,5 @@ public class CurrencyConverter {
         double dram = this.ruble * 7.51416;
         return dram;
     }
-    //endregion
-
-    //region Getters and Setters
-    public double getDollar() {
-        return dollar;
-    }
-
-    public void setDollar(double dollar) {
-        this.dollar = dollar;
-    }
-
-    public double getDram() {
-        return dram;
-    }
-
-    public void setDram(double dram) {
-        this.dram = dram;
-    }
-
-    public double getEuro() {
-        return euro;
-    }
-
-    public void setEuro(double euro) {
-        this.euro = euro;
-    }
-
-    public double getRuble() {
-        return ruble;
-    }
-
-    public void setRuble(double ruble) {
-        this.ruble = ruble;
-    }
-    //endregion
+    //endregion 
 }
