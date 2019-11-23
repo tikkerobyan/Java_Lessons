@@ -1,18 +1,20 @@
 package com.company;
 
 public class Circle {
-    //Properties
+    //region Properties
     private double radius;
+    //endregion
 
-    //Constructor
+    //region Constructor
     public Circle(double radius) {
         this.radius = radius;
     }
 
     public Circle() {
     }
+    //endregion
 
-    //regionMetods
+    //region Metods
     public double calculatePerimeter() {
         double p = 2 * Math.PI * this.radius;
         return p;
