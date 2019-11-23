@@ -14,7 +14,7 @@ public class Point {
     public Point() {
     }
 
-    //Metods
+    //region Metods
     public double getDistance() {
         double distance = Math.sqrt(Math.pow(this.coordinateX, 2) + Math.pow(this.coordinateY, 2));
         return distance;
@@ -24,7 +24,7 @@ public class Point {
         double distance = Math.sqrt(Math.pow((x - this.coordinateX), 2) + Math.pow((y - this.coordinateY), 2));
         return distance;
     }
-
+    //endregion
 
     //region Getters and Setters
     public double getCoordinateX() {
