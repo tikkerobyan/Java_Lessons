@@ -15,7 +15,7 @@ public class Rectangle {
     public Rectangle() {
     }
 
-    //Metods
+    //regionMetods
     public double calculatePerimeter() {
         double p = 2 * (this.height + this.width);
         return p;
@@ -25,6 +25,7 @@ public class Rectangle {
         double s = this.height * this.width;
         return s;
     }
+    //endregion
 
     //region Getters and Setters
     public double getHeight() {
