@@ -2,11 +2,12 @@ package com.company;
 
 public class Rectangle {
 
-    //Properties
+    //region Properties
     private double height;
     private double width;
+    //endregion
 
-    //Constructors
+    //region Constructors
     public Rectangle(double height, double width) {
         this.height = height;
         this.width = width;
@@ -14,8 +15,9 @@ public class Rectangle {
 
     public Rectangle() {
     }
+    //endregion
 
-    //regionMetods
+    //region Metods
     public double calculatePerimeter() {
         double p = 2 * (this.height + this.width);
         return p;
