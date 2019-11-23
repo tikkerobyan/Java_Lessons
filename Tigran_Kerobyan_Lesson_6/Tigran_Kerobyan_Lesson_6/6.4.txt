@@ -1,11 +1,12 @@
 package com.company;
 
 public class Point {
-    //Properties
+    //region Properties
     private double coordinateX;
     private double coordinateY;
+    //endregion
 
-    //Constructors
+    //region Constructors
     public Point(double coordinateX, double coordinateY) {
         this.coordinateX = coordinateX;
         this.coordinateY = coordinateY;
@@ -13,6 +14,7 @@ public class Point {
 
     public Point() {
     }
+    //endregion
 
     //region Metods
     public double getDistance() {
