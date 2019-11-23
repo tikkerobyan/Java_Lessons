@@ -1,23 +1,6 @@
 package com.company;
 
 public class TemperatureConverter {
-    //region Properties
-    private double farenheit;
-    private double celsius;
-    private double kelvin;
-    //endregion
-
-    //region Constuctors
-    public TemperatureConverter(double farenheit, double celsius, double kelvin) {
-        this.farenheit = farenheit;
-        this.celsius = celsius;
-        this.kelvin = kelvin;
-    }
-
-    public TemperatureConverter() {
-    }
-    //endregion
-
     //region Metods
     public double convertFarenheitToCelsius() {
         double temperatureCelsius = this.farenheit / 33.8;
@@ -47,32 +30,6 @@ public class TemperatureConverter {
     public double convertKelvinToCelsius() {
         double temperatureCrlsius = this.kelvin - 273.15;
         return temperatureCrlsius;
-    }
-    //endregion
-    
-    //region Getters and Setters
-    public double getFarenheit() {
-        return farenheit;
-    }
-
-    public void setFarenheit(double farenheit) {
-        this.farenheit = farenheit;
-    }
-
-    public double getCelsius() {
-        return celsius;
-    }
-
-    public void setCelsius(double celsius) {
-        this.celsius = celsius;
-    }
-
-    public double getKelvin() {
-        return kelvin;
-    }
-
-    public void setKelvin(double kelvin) {
-        this.kelvin = kelvin;
     }
     //endregion
 }
