@@ -1,0 +1,16 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public class Hospital {
+    ArrayList<Director> director;
+    ArrayList<Doctor> doctors;
+    ArrayList<Patient> patients;
+
+    public Hospital(ArrayList<Director> director, ArrayList<Doctor> doctors, ArrayList<Patient> patients) {
+        this.director = director;
+        this.doctors = doctors;
+        this.patients = patients;
+    }
+
+}

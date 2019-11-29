@@ -1,0 +1,10 @@
+package com.company;
+
+public class Director extends Person {
+    public Director() {
+    }
+
+    public Director(String name) {
+        super(name);
+    }
+}

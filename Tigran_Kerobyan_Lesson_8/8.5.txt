@@ -1,0 +1,24 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+        ArrayList<String> name = new ArrayList<>();
+        name.add("Hayk");
+        name.add("Mher");
+        name.add("Artak");
+        name.add("Sargis");
+        ArrayList<String> nameSurname = new ArrayList<>(name);
+        nameSurname.add("Mirzoyan");
+        nameSurname.add("Stepanyan");
+        nameSurname.add("Sargsyan");
+        nameSurname.add("Sahakyan");
+        for (int i = 0; i < nameSurname.size(); i++) {
+            System.out.println(nameSurname.get(i));
+        }
+    }
+}
+
+

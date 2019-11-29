@@ -1,0 +1,35 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Director director = new Director("Poghosyan");
+        ArrayList<Director> directors = new ArrayList<>();
+        directors.add(director);
+
+        Doctor doctor1 = new Doctor("Xachatryan");
+        Doctor doctor2 = new Doctor("Stepanyan");
+        Doctor doctor3 = new Doctor("Avoyan");
+        ArrayList<Doctor> doctors = new ArrayList<>();
+        doctors.add(doctor1);
+        doctors.add(doctor2);
+        doctors.add(doctor3);
+
+        Patient patient1 = new Patient("Sargsyan");
+        Patient patient2 = new Patient("Mirzoyan");
+        Patient patient3 = new Patient("Karapetyan");
+        Patient patient4 = new Patient("Minasyan");
+        Patient patient5 = new Patient("Azatyan");
+        ArrayList<Patient> patients = new ArrayList<>();
+        patients.add(patient1);
+        patients.add(patient2);
+        patients.add(patient3);
+        patients.add(patient4);
+        patients.add(patient5);
+
+        Hospital nairi = new Hospital(directors, doctors, patients);
+    }
+}
+

@@ -1,0 +1,19 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Dog dog1 = new Dog("Rex");
+        Dog dog2 = new Dog("Jeko");
+        Dog dog3 = new Dog("Graf");
+        ArrayList<Dog> dogs = new ArrayList<>();
+        dogs.add(dog1);
+        dogs.add(dog2);
+        dogs.add(dog3);
+        for (int i = 0; i < dogs.size(); i++) {
+            System.out.println(dogs.get(i).getName());
+        }
+    }
+}

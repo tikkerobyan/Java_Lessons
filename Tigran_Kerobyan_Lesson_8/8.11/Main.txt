@@ -1,0 +1,20 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Cat cat1 = new Cat("Murzik");
+        Cat cat2 = new Cat("Tom");
+        Cat cat3 = new Cat("Piso");
+        ArrayList<Cat> cats = new ArrayList<>();
+        cats.add(cat1);
+        cats.add(cat2);
+        cats.add(cat3);
+        for (int i = 0; i < cats.size(); i++) {
+            System.out.println(cats.get(i).getName());
+        }
+    }
+}
+
