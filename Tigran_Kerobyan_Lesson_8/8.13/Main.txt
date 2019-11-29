@@ -6,16 +6,17 @@ public class Main {
 
     public static void main(String[] args) {
         Director director = new Director("Poghosyan");
-        ArrayList<Director> directors = new ArrayList<>();
-        directors.add(director);
 
         Doctor doctor1 = new Doctor("Xachatryan");
         Doctor doctor2 = new Doctor("Stepanyan");
         Doctor doctor3 = new Doctor("Avoyan");
+        Doctor doctor4 = new Doctor("Mkitaryan");
         ArrayList<Doctor> doctors = new ArrayList<>();
         doctors.add(doctor1);
         doctors.add(doctor2);
         doctors.add(doctor3);
+        director.fireDoctor(doctor1, doctors);
+        director.hireDoctor(doctor4, doctors);
 
         Patient patient1 = new Patient("Sargsyan");
         Patient patient2 = new Patient("Mirzoyan");
@@ -29,7 +30,18 @@ public class Main {
         patients.add(patient4);
         patients.add(patient5);
 
-        Hospital nairi = new Hospital(directors, doctors, patients);
+        Hospital nairi = new Hospital(director, doctors, patients);
+        System.out.println("Director is -- " + director.getName());
+        System.out.print("Doctors are -- ");
+        for (int i = 0; i < doctors.size(); i++) {
+            System.out.print(doctors.get(i).getName() + " ");
+        }
+        System.out.println(" ");
+        System.out.print("Patients ara -- ");
+        for (int i = 0; i < patients.size(); i++) {
+            System.out.print(patients.get(i).getName() + " ");
+        }
     }
 }
+
 
