@@ -1,10 +1,18 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Director extends Person {
     public Director() {
     }
 
     public Director(String name) {
         super(name);
+    }
+    public void fireDoctor(Doctor doctor, ArrayList<Doctor>doctors){
+        doctors.remove(doctor);
+    }
+    public void hireDoctor(Doctor doctor,ArrayList<Doctor> doctors){
+        doctors.add(doctor);
     }
 }
