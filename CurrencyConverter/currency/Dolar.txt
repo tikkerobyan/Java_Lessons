@@ -1,0 +1,9 @@
+package com.company.currency;
+
+public class Dolar extends AbstractCurrencyUnit {
+
+    @Override
+    public void printCurrency() {
+        System.out.println(getCurrency() + " $");
+    }
+}

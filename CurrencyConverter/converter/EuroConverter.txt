@@ -1,0 +1,27 @@
+package com.company.converter;
+
+import com.company.currency.*;
+
+public class EuroConverter implements Converter {
+    @Override
+    public AbstractCurrencyUnit convert(AbstractCurrencyUnit currency) {
+        double currencyInEuro;
+        if (currency instanceof Dolar) {
+            currencyInEuro = currency.getCurrency() * 0.90255;
+        }
+        if (currency instanceof Dram) {
+            currencyInEuro = currency.getCurrency() * 0.00188829;
+        }
+        if (currency instanceof PoundSterling) {
+            currencyInEuro = currency.getCurrency() * 1.16788;
+        }
+        if (currency instanceof Ruble) {
+            currencyInEuro = currency.getCurrency() * 0.0140579;
+        } else {
+            currencyInEuro = currency.getCurrency();
+        }
+        Euro euro = new Euro();
+        euro.setCurrency(currencyInEuro);
+        return euro;
+    }
+}

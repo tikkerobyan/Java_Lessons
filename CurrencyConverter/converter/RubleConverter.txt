@@ -1,0 +1,27 @@
+package com.company.converter;
+
+import com.company.currency.*;
+
+public class RubleConverter implements Converter {
+    @Override
+    public AbstractCurrencyUnit convert(AbstractCurrencyUnit currency) {
+        double currencyInRuble;
+        if (currency instanceof Dolar) {
+            currencyInRuble = currency.getCurrency() * 64.195;
+        }
+        if (currency instanceof Dram) {
+            currencyInRuble = currency.getCurrency() * 0.134299;
+        }
+        if (currency instanceof Euro) {
+            currencyInRuble = currency.getCurrency() * 71.144;
+        }
+        if (currency instanceof PoundSterling) {
+            currencyInRuble = currency.getCurrency() * 83.0714;
+        } else {
+            currencyInRuble = currency.getCurrency();
+        }
+        Ruble ruble = new Ruble();
+        ruble.setCurrency(currencyInRuble);
+        return ruble;
+    }
+}

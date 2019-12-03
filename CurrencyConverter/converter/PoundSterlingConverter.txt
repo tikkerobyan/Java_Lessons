@@ -1,0 +1,27 @@
+package com.company.converter;
+
+import com.company.currency.*;
+
+public class PoundSterlingConverter implements Converter {
+    public AbstractCurrencyUnit convert(AbstractCurrencyUnit currency) {
+        double currencyInPound;
+
+        if (currency instanceof Dolar) {
+            currencyInPound = currency.getCurrency() * 0.772768;
+        }
+        if (currency instanceof Dram) {
+            currencyInPound = currency.getCurrency() * 0.00161662;
+        }
+        if (currency instanceof Euro) {
+            currencyInPound = currency.getCurrency() * 0.85625;
+        }
+        if (currency instanceof Ruble) {
+            currencyInPound = currency.getCurrency() * 0.0120381;
+        } else {
+            currencyInPound = currency.getCurrency();
+        }
+        PoundSterling pound = new PoundSterling();
+        pound.setCurrency(currencyInPound);
+        return pound;
+    }
+}

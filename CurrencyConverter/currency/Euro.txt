@@ -1,0 +1,9 @@
+package com.company.currency;
+
+public class Euro extends AbstractCurrencyUnit {
+
+    @Override
+    public void printCurrency() {
+        System.out.println(getCurrency() + " ˆ");
+    }
+}

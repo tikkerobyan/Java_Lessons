@@ -1,0 +1,27 @@
+package com.company.converter;
+
+import com.company.currency.*;
+
+public class DramConverter implements Converter {
+    @Override
+    public AbstractCurrencyUnit convert(AbstractCurrencyUnit currency) {
+        double currencyInDram;
+        if (currency instanceof Dolar) {
+            currencyInDram = currency.getCurrency() * 478.007;
+        }
+        if (currency instanceof Euro) {
+            currencyInDram = currency.getCurrency() * 529.55;
+        }
+        if (currency instanceof PoundSterling) {
+            currencyInDram = currency.getCurrency() * 618.38;
+        }
+        if (currency instanceof Ruble) {
+            currencyInDram = currency.getCurrency() * 7.44518;
+        } else {
+            currencyInDram = currency.getCurrency();
+        }
+        Dram dram = new Dram();
+        dram.setCurrency(currencyInDram);
+        return dram;
+    }
+}
